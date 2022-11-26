@@ -1,6 +1,8 @@
-# For Blok
+# Originally for Elite-C; Converting to Blok
 #pragma once
 #define I2C_DRIVER I2CD1
+
+CONVERT_TO = blok
 SRC += features/caps_word.c
 
 MCU = RP2040
