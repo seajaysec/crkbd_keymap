@@ -1,9 +1,9 @@
 ❯ qmk compile
-Ψ Compiling keymap with gmake --jobs=1 crkbd:seajaysec_CRKBD_FORREAL
+Ψ Compiling keymap with gmake --jobs=1 crkbd:seajaysec_CRKBD
 
 
 QMK Firmware 0.18.17
-Making crkbd/rev1 with keymap seajaysec_CRKBD_FORREAL
+Making crkbd/rev1 with keymap seajaysec_CRKBD
 
 arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ Generating: .build/obj_crkbd_rev1/src/info_config.h                             
 Generating: .build/obj_crkbd_rev1/src/default_keyboard.c                                            [OK]
 Generating: .build/obj_crkbd_rev1/src/default_keyboard.h                                            [OK]
 Generating: .build/obj_crkbd_rev1/src/layouts.h                                                     [OK]
-Compiling: keyboards/crkbd/keymaps/seajaysec_CRKBD_FORREAL/features/caps_word.c                     [OK]
+Compiling: keyboards/crkbd/keymaps/seajaysec_CRKBD/features/caps_word.c                     [OK]
 Compiling: keyboards/crkbd/crkbd.c                                                                  [OK]
 Compiling: keyboards/crkbd/rev1/rev1.c                                                              [OK]
 Compiling: .build/obj_crkbd_rev1/src/default_keyboard.c                                             [OK]
@@ -227,6 +227,6 @@ cc1: all warnings being treated as errors
  |
  |
  |
-gmake[1]: *** [builddefs/common_rules.mk:359: .build/obj_crkbd_rev1_seajaysec_CRKBD_FORREAL/quantum/matrix.o] Error 1
-gmake: *** [Makefile:414: crkbd:seajaysec_CRKBD_FORREAL] Error 1
+gmake[1]: *** [builddefs/common_rules.mk:359: .build/obj_crkbd_rev1_seajaysec_CRKBD/quantum/matrix.o] Error 1
+gmake: *** [Makefile:414: crkbd:seajaysec_CRKBD] Error 1
 Make finished with errors
