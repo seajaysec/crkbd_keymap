@@ -1,0 +1,232 @@
+❯ qmk compile
+Ψ Compiling keymap with gmake --jobs=1 crkbd:seajaysec_CRKBD_FORREAL
+
+
+QMK Firmware 0.18.17
+Making crkbd/rev1 with keymap seajaysec_CRKBD_FORREAL
+
+arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 8-2019-q3-update) 8.3.1 20190703 (release) [gcc-8-branch revision 273027]
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_crkbd_rev1/src/info_config.h                                                 [OK]
+Generating: .build/obj_crkbd_rev1/src/default_keyboard.c                                            [OK]
+Generating: .build/obj_crkbd_rev1/src/default_keyboard.h                                            [OK]
+Generating: .build/obj_crkbd_rev1/src/layouts.h                                                     [OK]
+Compiling: keyboards/crkbd/keymaps/seajaysec_CRKBD_FORREAL/features/caps_word.c                     [OK]
+Compiling: keyboards/crkbd/crkbd.c                                                                  [OK]
+Compiling: keyboards/crkbd/rev1/rev1.c                                                              [OK]
+Compiling: .build/obj_crkbd_rev1/src/default_keyboard.c                                             [OK]
+Compiling: quantum/keymap_introspection.c                                                           [OK]
+Compiling: quantum/quantum.c                                                                        [OK]
+Compiling: quantum/bitwise.c                                                                        [OK]
+Compiling: quantum/led.c                                                                            [OK]
+Compiling: quantum/action.c                                                                         [OK]
+Compiling: quantum/action_layer.c                                                                   [OK]
+Compiling: quantum/action_tapping.c                                                                 [OK]
+Compiling: quantum/action_util.c                                                                    [OK]
+Compiling: quantum/eeconfig.c                                                                       [OK]
+Compiling: quantum/keyboard.c                                                                       [OK]
+Compiling: quantum/keymap_common.c                                                                  [OK]
+Compiling: quantum/keycode_config.c                                                                 [OK]
+Compiling: quantum/sync_timer.c                                                                     [OK]
+Compiling: quantum/logging/debug.c                                                                  [OK]
+Compiling: quantum/logging/sendchar.c                                                               [OK]
+Compiling: quantum/logging/print.c                                                                  [OK]
+Compiling: quantum/bootmagic/bootmagic_lite.c                                                       [OK]
+Compiling: quantum/bootmagic/magic.c                                                                [OK]
+Compiling: quantum/matrix_common.c                                                                  [OK]
+Compiling: quantum/matrix.c                                                                        In file included from ./lib/chibios/os/hal/include/hal_pal.h:174,
+                 from ./lib/chibios/os/hal/include/hal.h:299,
+                 from platforms/chibios/platform_deps.h:18,
+                 from quantum/quantum.h:18,
+                 from quantum/matrix.c:23:
+platforms/chibios/_pin_defs.h:132:21: error: 'GPIOD' undeclared here (not in a function); did you mean 'PIO0'?
+ #define D4 PAL_LINE(GPIOD, 4)
+                     ^~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:50: note: in definition of macro 'PAL_LINE'
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                                  ^~~~
+./keyboards/crkbd/config.h:28:7: note: in expansion of macro 'D4'
+     { D4, C6, D7, E6 }
+       ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:132:12: note: in expansion of macro 'PAL_LINE'
+ #define D4 PAL_LINE(GPIOD, 4)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:28:7: note: in expansion of macro 'D4'
+     { D4, C6, D7, E6 }
+       ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+platforms/chibios/_pin_defs.h:101:21: error: 'GPIOC' undeclared here (not in a function); did you mean 'PIO0'?
+ #define C6 PAL_LINE(GPIOC, 6)
+                     ^~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:50: note: in definition of macro 'PAL_LINE'
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                                  ^~~~
+./keyboards/crkbd/config.h:28:11: note: in expansion of macro 'C6'
+     { D4, C6, D7, E6 }
+           ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:101:12: note: in expansion of macro 'PAL_LINE'
+ #define C6 PAL_LINE(GPIOC, 6)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:28:11: note: in expansion of macro 'C6'
+     { D4, C6, D7, E6 }
+           ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:135:12: note: in expansion of macro 'PAL_LINE'
+ #define D7 PAL_LINE(GPIOD, 7)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:28:15: note: in expansion of macro 'D7'
+     { D4, C6, D7, E6 }
+               ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+platforms/chibios/_pin_defs.h:167:21: error: 'GPIOE' undeclared here (not in a function); did you mean 'PIO0'?
+ #define E6 PAL_LINE(GPIOE, 6)
+                     ^~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:50: note: in definition of macro 'PAL_LINE'
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                                  ^~~~
+./keyboards/crkbd/config.h:28:19: note: in expansion of macro 'E6'
+     { D4, C6, D7, E6 }
+                   ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:167:12: note: in expansion of macro 'PAL_LINE'
+ #define E6 PAL_LINE(GPIOE, 6)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:28:19: note: in expansion of macro 'E6'
+     { D4, C6, D7, E6 }
+                   ^~
+quantum/matrix.c:53:58: note: in expansion of macro 'MATRIX_ROW_PINS'
+ static SPLIT_MUTABLE_ROW pin_t row_pins[ROWS_PER_HAND] = MATRIX_ROW_PINS;
+                                                          ^~~~~~~~~~~~~~~
+platforms/chibios/_pin_defs.h:198:21: error: 'GPIOF' undeclared here (not in a function); did you mean 'PIO0'?
+ #define F4 PAL_LINE(GPIOF, 4)
+                     ^~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:50: note: in definition of macro 'PAL_LINE'
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                                  ^~~~
+./keyboards/crkbd/config.h:32:7: note: in expansion of macro 'F4'
+     { F4, F5, F6, F7, B1, B3 }
+       ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:198:12: note: in expansion of macro 'PAL_LINE'
+ #define F4 PAL_LINE(GPIOF, 4)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:7: note: in expansion of macro 'F4'
+     { F4, F5, F6, F7, B1, B3 }
+       ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:199:12: note: in expansion of macro 'PAL_LINE'
+ #define F5 PAL_LINE(GPIOF, 5)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:11: note: in expansion of macro 'F5'
+     { F4, F5, F6, F7, B1, B3 }
+           ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:200:12: note: in expansion of macro 'PAL_LINE'
+ #define F6 PAL_LINE(GPIOF, 6)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:15: note: in expansion of macro 'F6'
+     { F4, F5, F6, F7, B1, B3 }
+               ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:201:12: note: in expansion of macro 'PAL_LINE'
+ #define F7 PAL_LINE(GPIOF, 7)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:19: note: in expansion of macro 'F7'
+     { F4, F5, F6, F7, B1, B3 }
+                   ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+platforms/chibios/_pin_defs.h:63:21: error: 'GPIOB' undeclared here (not in a function); did you mean 'PIO0'?
+ #define B1 PAL_LINE(GPIOB, 1)
+                     ^~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:50: note: in definition of macro 'PAL_LINE'
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                                  ^~~~
+./keyboards/crkbd/config.h:32:23: note: in expansion of macro 'B1'
+     { F4, F5, F6, F7, B1, B3 }
+                       ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:63:12: note: in expansion of macro 'PAL_LINE'
+ #define B1 PAL_LINE(GPIOB, 1)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:23: note: in expansion of macro 'B1'
+     { F4, F5, F6, F7, B1, B3 }
+                       ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:203:47: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+ #define PAL_LINE(port, pad)             ((pad), (port))
+                                               ^
+platforms/chibios/_pin_defs.h:65:12: note: in expansion of macro 'PAL_LINE'
+ #define B3 PAL_LINE(GPIOB, 3)
+            ^~~~~~~~
+./keyboards/crkbd/config.h:32:27: note: in expansion of macro 'B3'
+     { F4, F5, F6, F7, B1, B3 }
+                           ^~
+quantum/matrix.c:56:58: note: in expansion of macro 'MATRIX_COL_PINS'
+ static SPLIT_MUTABLE_COL pin_t col_pins[MATRIX_COLS]   = MATRIX_COL_PINS;
+                                                          ^~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+gmake[1]: *** [builddefs/common_rules.mk:359: .build/obj_crkbd_rev1_seajaysec_CRKBD_FORREAL/quantum/matrix.o] Error 1
+gmake: *** [Makefile:414: crkbd:seajaysec_CRKBD_FORREAL] Error 1
+Make finished with errors
