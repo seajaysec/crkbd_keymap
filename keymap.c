@@ -404,14 +404,13 @@ void render_status_main(void) {
     render_keylogger_status();
 }
 
-bool oled_task_user(void) {
+void oled_task_user(void) {
     update_log();
     if (is_keyboard_master()) {
         render_status_main();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
     } else {
         render_crkbd_logo();
     }
-    return true;
 }
 #endif // OLED_ENABLE
 
